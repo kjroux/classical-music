@@ -359,7 +359,7 @@ class ClassicalMusicTracker {
             button.addEventListener('click', () => {
                 const weekId = button.dataset.week;
                 if (!this.additionalListenCount[weekId]) {
-                    this.additionalListenCount[weekId] = 3; // Start after listen 3
+                    this.additionalListenCount[weekId] = 4; // Start after listen 4
                 }
                 this.additionalListenCount[weekId]++;
                 this.createAdditionalListenUI(weekId, this.additionalListenCount[weekId]);
