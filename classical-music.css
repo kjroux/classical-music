@@ -38,6 +38,15 @@ header {
     color: white;
     padding: 30px 0;
     box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -319,6 +328,13 @@ main {
     flex: 1;
     font-size: 0.95em;
     line-height: 1.5;
+}
+
+.listen-date {
+    color: var(--text-muted);
+    font-weight: normal;
+    font-size: 0.85em;
+    font-style: italic;
 }
 
 .session-notes {

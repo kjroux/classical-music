@@ -5,6 +5,7 @@ class ClassicalMusicTracker {
     constructor() {
         this.storageKeyNotes = 'classicalMusicSessionNotes';
         this.storageKeyProgress = 'classicalMusicSessionProgress';
+        this.storageKeyDates = 'classicalMusicSessionDates';
         this.totalWeeks = 14; // Total number of pieces
         this.additionalListenCount = {}; // Track additional listens per week
         this.init();
@@ -13,6 +14,7 @@ class ClassicalMusicTracker {
     init() {
         this.loadProgress();
         this.loadNotes();
+        this.loadDates();
         this.attachEventListeners();
         this.updateOverallProgress();
     }
@@ -111,6 +113,64 @@ class ClassicalMusicTracker {
 
         notes[textarea.id] = textarea.value;
         localStorage.setItem(this.storageKeyNotes, JSON.stringify(notes));
+    }
+
+    // Load dates from localStorage
+    loadDates() {
+        const savedDates = localStorage.getItem(this.storageKeyDates);
+        if (savedDates) {
+            const dates = JSON.parse(savedDates);
+            Object.keys(dates).forEach(checkboxId => {
+                this.updateDateDisplay(checkboxId, dates[checkboxId]);
+            });
+        }
+    }
+
+    // Save date when checkbox is checked
+    saveDate(checkboxId) {
+        const savedDates = localStorage.getItem(this.storageKeyDates);
+        const dates = savedDates ? JSON.parse(savedDates) : {};
+        dates[checkboxId] = new Date().toISOString();
+        localStorage.setItem(this.storageKeyDates, JSON.stringify(dates));
+        this.updateDateDisplay(checkboxId, dates[checkboxId]);
+    }
+
+    // Remove date when checkbox is unchecked
+    removeDate(checkboxId) {
+        const savedDates = localStorage.getItem(this.storageKeyDates);
+        const dates = savedDates ? JSON.parse(savedDates) : {};
+        delete dates[checkboxId];
+        localStorage.setItem(this.storageKeyDates, JSON.stringify(dates));
+        this.updateDateDisplay(checkboxId, null);
+    }
+
+    // Update date display next to checkbox
+    updateDateDisplay(checkboxId, isoDate) {
+        const checkbox = document.getElementById(checkboxId);
+        if (!checkbox) return;
+
+        const label = checkbox.parentElement.querySelector('label');
+        if (!label) return;
+
+        // Remove existing date span if present
+        const existingDate = label.querySelector('.listen-date');
+        if (existingDate) {
+            existingDate.remove();
+        }
+
+        // Add new date if provided
+        if (isoDate) {
+            const date = new Date(isoDate);
+            const dateStr = date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+            });
+            const dateSpan = document.createElement('span');
+            dateSpan.className = 'listen-date';
+            dateSpan.textContent = ` (${dateStr})`;
+            label.appendChild(dateSpan);
+        }
     }
 
     // Update overall progress bar and text
@@ -224,6 +284,11 @@ class ClassicalMusicTracker {
 
         checkbox.addEventListener('change', () => {
             this.updateSessionStyle(sessionId, checkbox.checked);
+            if (checkbox.checked) {
+                this.saveDate(sessionId);
+            } else {
+                this.removeDate(sessionId);
+            }
             this.saveProgress();
         });
 
@@ -238,6 +303,23 @@ class ClassicalMusicTracker {
 
     // Attach all event listeners
     attachEventListeners() {
+        // Click header to collapse all and scroll to top
+        const header = document.querySelector('header');
+        if (header) {
+            header.addEventListener('click', () => {
+                // Collapse all week cards
+                document.querySelectorAll('.week-card').forEach(card => {
+                    card.classList.remove('expanded');
+                });
+
+                // Smooth scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
         // Expand/collapse week cards
         document.querySelectorAll('.week-header').forEach(header => {
             header.addEventListener('click', (e) => {
@@ -256,6 +338,11 @@ class ClassicalMusicTracker {
         document.querySelectorAll('.session-checkbox').forEach(checkbox => {
             checkbox.addEventListener('change', () => {
                 this.updateSessionStyle(checkbox.id, checkbox.checked);
+                if (checkbox.checked) {
+                    this.saveDate(checkbox.id);
+                } else {
+                    this.removeDate(checkbox.id);
+                }
                 this.saveProgress();
             });
         });
