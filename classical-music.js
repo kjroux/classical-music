@@ -185,6 +185,16 @@ class ClassicalMusicTracker {
         }
     }
 
+    // Convert number to ordinal word (1 -> "First", 2 -> "Second", etc.)
+    getOrdinalWord(num) {
+        const ordinals = [
+            '', 'First', 'Second', 'Third', 'Fourth', 'Fifth',
+            'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth',
+            'Eleventh', 'Twelfth', 'Thirteenth', 'Fourteenth', 'Fifteenth'
+        ];
+        return ordinals[num] || `${num}th`;
+    }
+
     // Create additional listen UI
     createAdditionalListenUI(weekId, sessionNumber, isChecked = false, notesValue = '') {
         const additionalContainer = document.getElementById(`${weekId}-additional`);
@@ -196,11 +206,12 @@ class ClassicalMusicTracker {
 
         const sessionId = `${weekId}-listen-${sessionNumber}`;
         const textareaId = `${sessionId}-notes`;
+        const ordinalWord = this.getOrdinalWord(sessionNumber);
 
         sessionDiv.innerHTML = `
             <div class="session-header">
                 <input type="checkbox" class="session-checkbox" id="${sessionId}" ${isChecked ? 'checked' : ''}>
-                <label for="${sessionId}"><strong>Listen ${sessionNumber}</strong> - Additional reflection</label>
+                <label for="${sessionId}"><strong>${ordinalWord} Listen</strong> - Additional reflection</label>
             </div>
             <textarea class="session-notes" id="${textareaId}" placeholder="What new details or perspectives emerged?">${notesValue}</textarea>
         `;
@@ -261,7 +272,7 @@ class ClassicalMusicTracker {
             button.addEventListener('click', () => {
                 const weekId = button.dataset.week;
                 if (!this.additionalListenCount[weekId]) {
-                    this.additionalListenCount[weekId] = 4; // Start after listen 3
+                    this.additionalListenCount[weekId] = 3; // Start after listen 3
                 }
                 this.additionalListenCount[weekId]++;
                 this.createAdditionalListenUI(weekId, this.additionalListenCount[weekId]);
