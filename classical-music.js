@@ -196,6 +196,30 @@ class ClassicalMusicTracker {
         if (weeksCompletedSpan) {
             weeksCompletedSpan.textContent = completedCount;
         }
+
+        // Update unit progress badges
+        this.updateUnitProgress();
+    }
+
+    // Update unit progress badges
+    updateUnitProgress() {
+        const unitBadges = document.querySelectorAll('.unit-duration[data-unit]');
+
+        unitBadges.forEach(badge => {
+            const weekIds = badge.dataset.weeks.split(',');
+            const total = parseInt(badge.dataset.total);
+            let completed = 0;
+
+            // Count completed weeks in this unit
+            weekIds.forEach(weekId => {
+                if (this.isThirdListenComplete(weekId)) {
+                    completed++;
+                }
+            });
+
+            // Update badge text
+            badge.textContent = `${completed}/${total} pieces`;
+        });
     }
 
     // Check if third listen is complete for a week
