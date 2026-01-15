@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Classical Music</title>
+    <link rel="stylesheet" href="classical-music.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎵 Intro to Classical Music</h1>
+            <p class="subtitle">Interactive Syllabus & Listening Journal</p>
+            <div class="progress-summary">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="overall-progress"></div>
+                </div>
+                <p class="progress-text"><span id="weeks-completed">0</span> of <span id="total-weeks">14</span> pieces completed</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Unit 1: Baroque Foundations -->
+        <section class="unit">
+            <div class="unit-header">
+                <h2>UNIT 1: Baroque Foundations</h2>
+                <span class="unit-duration">3 pieces</span>
+            </div>
+
+            <!-- Week 1: Bach -->
+            <div class="week-card" data-week-id="week-1">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-1" disabled>
+                        <label for="checkbox-week-1">
+                            <h3>Week 1: J.S. Bach - Brandenburg Concerto No. 3 in G Major</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>The conversational nature of the music. Bach writes in "counterpoint" - multiple melodic lines happening simultaneously, each important. Try to follow individual string sections as they pass melodies back and forth like a discussion.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>In the first movement, count how many distinct melodic "voices" you can identify. Notice how they interweave without clashing.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Bach wrote these as a job application to the Margrave of Brandenburg (who apparently never acknowledged them). This is Baroque music at its most structured and mathematical, yet deeply expressive.</p>
+                        </div>
+                    </div>
+
+                    <!-- Listening Sessions -->
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-1-listen-1">
+                                <label for="week-1-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-1-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-1-listen-2">
+                                <label for="week-1-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-1-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-1-listen-3">
+                                <label for="week-1-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-1-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-1-additional"></div>
+                        <button class="add-listen-btn" data-week="week-1">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 2: Vivaldi -->
+            <div class="week-card" data-week-id="week-2">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-2" disabled>
+                        <label for="checkbox-week-2">
+                            <h3>Week 2: Vivaldi - "The Four Seasons" (Spring and Winter)</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Program music - music that tells a story. Vivaldi included sonnets describing each season. Listen for birdsong imitations in Spring (three solo violins chirping), storms, sleeping shepherds, ice cracking in Winter.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Read the sonnets first, then see if you can identify each scene in the music without looking at timestamps. How does Vivaldi translate images into sound?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>This is the Baroque at its most theatrical and accessible. The solo violin represents different characters or elements of nature.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-2-listen-1">
+                                <label for="week-2-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-2-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-2-listen-2">
+                                <label for="week-2-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-2-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-2-listen-3">
+                                <label for="week-2-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-2-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-2-additional"></div>
+                        <button class="add-listen-btn" data-week="week-2">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 3: Handel -->
+            <div class="week-card" data-week-id="week-3">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-3" disabled>
+                        <label for="checkbox-week-3">
+                            <h3>Week 3: Handel - "Messiah" (selections)</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Text setting - how the melody reflects the meaning of words. In "Ev'ry Valley," notice how the word "exalted" rises high, "mountain" is high, and "crooked" has a twisting melodic line.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Listen to the "Hallelujah" chorus and identify when all voices sing together (homophony) versus when they sing independently (polyphony). What emotional effect does each create?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Oratorio - essentially opera without staging. Handel was the master of drama in music.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-3-listen-1">
+                                <label for="week-3-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-3-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-3-listen-2">
+                                <label for="week-3-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-3-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-3-listen-3">
+                                <label for="week-3-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-3-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-3-additional"></div>
+                        <button class="add-listen-btn" data-week="week-3">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit 2: Classical Clarity -->
+        <section class="unit">
+            <div class="unit-header">
+                <h2>UNIT 2: Classical Clarity</h2>
+                <span class="unit-duration">4 pieces</span>
+            </div>
+
+            <!-- Week 4: Mozart -->
+            <div class="week-card" data-week-id="week-4">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-4" disabled>
+                        <label for="checkbox-week-4">
+                            <h3>Week 4: Mozart - Piano Concerto No. 21, 2nd movement</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>The dialogue between soloist and orchestra. Mozart creates a three-part conversation: piano, strings, and winds each have distinct personalities. Notice the crystalline clarity - you can hear every note.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Map the emotional arc. The movement opens serene but develops tension. Where does it reach its peak of intensity? How does Mozart resolve it?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Classical period music emphasizes balance, proportion, and clear melodic lines over complex counterpoint. Think architecture - elegant, symmetrical, purposeful.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-4-listen-1">
+                                <label for="week-4-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-4-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-4-listen-2">
+                                <label for="week-4-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-4-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-4-listen-3">
+                                <label for="week-4-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-4-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-4-additional"></div>
+                        <button class="add-listen-btn" data-week="week-4">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 5: Haydn -->
+            <div class="week-card" data-week-id="week-5">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-5" disabled>
+                        <label for="checkbox-week-5">
+                            <h3>Week 5: Haydn - Symphony No. 94 "Surprise"</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Sonata form in the first movement - the fundamental structure of Classical music. Listen for: (1) Two contrasting themes in the exposition, (2) Development where themes are fragmented and transformed, (3) Recapitulation where themes return home.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>In the famous second movement, Haydn lulls you with a simple theme then BAM - a loud chord meant to wake drowsy aristocrats. Notice how he develops this simple folk-like tune into something sophisticated.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Haydn essentially invented the symphony as we know it. He wrote 104 of them, experimenting with form throughout.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-5-listen-1">
+                                <label for="week-5-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-5-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-5-listen-2">
+                                <label for="week-5-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-5-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-5-listen-3">
+                                <label for="week-5-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-5-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-5-additional"></div>
+                        <button class="add-listen-btn" data-week="week-5">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 6: Beethoven Symphony 5 -->
+            <div class="week-card" data-week-id="week-6">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-6" disabled>
+                        <label for="checkbox-week-6">
+                            <h3>Week 6: Beethoven - Symphony No. 5</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Motivic development. The famous "da-da-da-DUM" four-note motif appears in every movement, transformed constantly. It's Beethoven's most unified symphony - an entire 30-minute work generated from four notes.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Track the opening motif through the first movement. Hear it in the melody, in the accompaniment, inverted, stretched out, compressed. Count how many times it appears in the first two minutes.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>This is the bridge between Classical and Romantic eras. Beethoven takes Classical forms but fills them with unprecedented emotional intensity and drama. The progression from C minor struggle to C major triumph defined "heroic" music for generations.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-6-listen-1">
+                                <label for="week-6-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-6-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-6-listen-2">
+                                <label for="week-6-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-6-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-6-listen-3">
+                                <label for="week-6-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-6-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-6-additional"></div>
+                        <button class="add-listen-btn" data-week="week-6">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 7: Beethoven Moonlight -->
+            <div class="week-card" data-week-id="week-7">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-7" disabled>
+                        <label for="checkbox-week-7">
+                            <h3>Week 7: Beethoven - Piano Sonata No. 14 "Moonlight"</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>The revolutionary first movement abandons Classical brightness for dark, continuous mood. The right hand provides a simple melody while the left creates a hypnotic, rippling accompaniment. The structure is there but hidden.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Feel the pacing. Beethoven marks it "quasi una fantasia" - like an improvisation. Does it feel spontaneous or calculated? Both?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Beethoven didn't call this "Moonlight" - a critic later said it evoked moonlight on Lake Lucerne. But the nickname stuck because it captures the nocturnal, introspective quality.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-7-listen-1">
+                                <label for="week-7-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-7-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-7-listen-2">
+                                <label for="week-7-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-7-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-7-listen-3">
+                                <label for="week-7-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-7-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-7-additional"></div>
+                        <button class="add-listen-btn" data-week="week-7">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit 3: Romantic Expression -->
+        <section class="unit">
+            <div class="unit-header">
+                <h2>UNIT 3: Romantic Expression</h2>
+                <span class="unit-duration">4 pieces</span>
+            </div>
+
+            <!-- Week 8: Schubert -->
+            <div class="week-card" data-week-id="week-8">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-8" disabled>
+                        <label for="checkbox-week-8">
+                            <h3>Week 8: Schubert - "Winterreise" (Winter Journey), selections</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Text painting and psychological depth in art song ("Lied"). The piano isn't just accompaniment - it's a equal partner creating atmosphere. In "Der Lindenbaum," notice how the piano rustles like leaves.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Follow the narrative arc across 3-4 songs. The protagonist is a rejected lover wandering through winter. How does Schubert musically depict his descent into despair?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Schubert died at 31 but revolutionized the art song. This cycle shows the Romantic era's obsession with individual psychology, nature, and alienation.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-8-listen-1">
+                                <label for="week-8-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-8-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-8-listen-2">
+                                <label for="week-8-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-8-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-8-listen-3">
+                                <label for="week-8-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-8-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-8-additional"></div>
+                        <button class="add-listen-btn" data-week="week-8">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 9: Chopin -->
+            <div class="week-card" data-week-id="week-9">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-9" disabled>
+                        <label for="checkbox-week-9">
+                            <h3>Week 9: Chopin - Nocturnes (Op. 9 No. 2, Op. 27 No. 2)</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>The singing melody in the right hand, ornamented and expressive, over arpeggiated (broken chord) left hand accompaniment. Chopin called these "nocturnes" - night pieces - and they feel like private meditations.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Notice rubato - the subtle pushing and pulling of tempo for expression. The melody breathes, hesitates, rushes forward. This isn't mechanical time.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Chopin wrote almost exclusively for piano, exploiting its unique capabilities for intimacy and color. This is the Romantic piano at its most personal.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-9-listen-1">
+                                <label for="week-9-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-9-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-9-listen-2">
+                                <label for="week-9-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-9-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-9-listen-3">
+                                <label for="week-9-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-9-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-9-additional"></div>
+                        <button class="add-listen-btn" data-week="week-9">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 10: Brahms -->
+            <div class="week-card" data-week-id="week-10">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-10" disabled>
+                        <label for="checkbox-week-10">
+                            <h3>Week 10: Brahms - Symphony No. 4, 4th movement</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Passacaglia form - a set of variations over a repeating bass line. Brahms takes a Baroque structure and fills it with Romantic passion. Can you hear the eight-note pattern cycling through the entire movement?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Each variation transforms the emotional character while maintaining the underlying pattern. Count variations and note how the energy builds toward the climax.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Brahms was seen as the "conservative" Romantic, respecting Classical forms while Liszt and Wagner pushed radical new directions. But this movement shows profound innovation within tradition.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-10-listen-1">
+                                <label for="week-10-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-10-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-10-listen-2">
+                                <label for="week-10-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-10-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-10-listen-3">
+                                <label for="week-10-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-10-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-10-additional"></div>
+                        <button class="add-listen-btn" data-week="week-10">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 11: Tchaikovsky -->
+            <div class="week-card" data-week-id="week-11">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-11" disabled>
+                        <label for="checkbox-week-11">
+                            <h3>Week 11: Tchaikovsky - Symphony No. 6 "Pathétique"</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Raw emotional confession. The final movement is a slow, descending fade to darkness - unprecedented for a symphony finale. Tchaikovsky called this his most sincere work.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Chart the emotional journey of the first movement. It alternates between anguished intensity and tender lyricism. How does Tchaikovsky transition between these extremes?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Tchaikovsky premiered this nine days before his death. Whether he knew he was dying is debated, but the music feels like a farewell. The Romantic era embraced this kind of biographical interpretation.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-11-listen-1">
+                                <label for="week-11-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-11-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-11-listen-2">
+                                <label for="week-11-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-11-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-11-listen-3">
+                                <label for="week-11-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-11-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-11-additional"></div>
+                        <button class="add-listen-btn" data-week="week-11">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unit 4: Late Romantic & Modern -->
+        <section class="unit">
+            <div class="unit-header">
+                <h2>UNIT 4: Late Romantic & Modern</h2>
+                <span class="unit-duration">3 pieces</span>
+            </div>
+
+            <!-- Week 12: Mahler -->
+            <div class="week-card" data-week-id="week-12">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-12" disabled>
+                        <label for="checkbox-week-12">
+                            <h3>Week 12: Mahler - Symphony No. 1, 3rd movement</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Irony and collage. Mahler takes the children's song "Frère Jacques" and transforms it into a grotesque funeral march in minor key. Then he interrupts with sentimental Viennese café music. Nothing is pure or simple.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>Notice the layers of quotation and style. Mahler includes folk tunes, military marches, and high art music in the same work. What emotional effect does this fragmentation create?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Mahler's symphonies are massive, sprawling, and psychologically complex. He said "A symphony must be like the world - it must contain everything."</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-12-listen-1">
+                                <label for="week-12-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-12-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-12-listen-2">
+                                <label for="week-12-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-12-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-12-listen-3">
+                                <label for="week-12-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-12-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-12-additional"></div>
+                        <button class="add-listen-btn" data-week="week-12">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 13: Debussy -->
+            <div class="week-card" data-week-id="week-13">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-13" disabled>
+                        <label for="checkbox-week-13">
+                            <h3>Week 13: Debussy - "Prélude à l'après-midi d'un faune"</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>The dissolution of traditional harmony and structure. Debussy creates shimmering, atmospheric sound rather than clear melody and form. Focus on color and texture - how orchestral instruments blend.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>This is Impressionism in music, parallel to Monet in painting. Rather than analyzing structure, let the music create mood and image. What do you see or feel?</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>Debussy broke from German Romantic tradition, looking instead to French poetry, Asian music, and natural sounds. This piece scandalized audiences - where's the development, the climax, the resolution?</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-13-listen-1">
+                                <label for="week-13-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-13-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-13-listen-2">
+                                <label for="week-13-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-13-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-13-listen-3">
+                                <label for="week-13-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-13-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-13-additional"></div>
+                        <button class="add-listen-btn" data-week="week-13">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Week 14: Stravinsky -->
+            <div class="week-card" data-week-id="week-14">
+                <div class="week-header">
+                    <div class="week-info">
+                        <input type="checkbox" class="week-checkbox" id="checkbox-week-14" disabled>
+                        <label for="checkbox-week-14">
+                            <h3>Week 14: Stravinsky - "The Rite of Spring," Part I</h3>
+                        </label>
+                    </div>
+                    <button class="expand-btn" aria-label="Expand week details">▼</button>
+                </div>
+                <div class="week-content">
+                    <div class="week-details">
+                        <div class="detail-section">
+                            <h4>What to listen for:</h4>
+                            <p>Rhythm as the primary driver, not melody or harmony. Stravinsky uses irregular meters, pounding repetition, and savage energy. The opening bassoon melody is deliberately uncomfortable - played in its highest, straining register.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Active listening exercise:</h4>
+                            <p>In the "Dance of the Adolescents," count the relentless chord strikes. Can you predict when the next accent will land? Stravinsky keeps you off balance.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Context:</h4>
+                            <p>This ballet caused a riot at its 1913 premiere. It depicts pagan sacrifice and abandons all Romantic beauty for primitivism and violence. It's the sound of the 20th century arriving with brutal force.</p>
+                        </div>
+                    </div>
+
+                    <div class="listening-sessions">
+                        <h4>Listening Sessions</h4>
+
+                        <div class="listen-session" data-session="1">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-14-listen-1">
+                                <label for="week-14-listen-1"><strong>First Listen</strong> - Initial impressions without analysis</label>
+                            </div>
+                            <textarea class="session-notes" id="week-14-listen-1-notes" placeholder="What emotional response did you have? What caught your ear?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="2">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-14-listen-2">
+                                <label for="week-14-listen-2"><strong>Second Listen</strong> - Focus on one element</label>
+                            </div>
+                            <textarea class="session-notes" id="week-14-listen-2-notes" placeholder="Which element did you focus on? What did you notice?"></textarea>
+                        </div>
+
+                        <div class="listen-session" data-session="3">
+                            <div class="session-header">
+                                <input type="checkbox" class="session-checkbox" id="week-14-listen-3">
+                                <label for="week-14-listen-3"><strong>Third Listen</strong> - Consider structure and journey</label>
+                            </div>
+                            <textarea class="session-notes" id="week-14-listen-3-notes" placeholder="What is the emotional journey? How does the piece develop?"></textarea>
+                        </div>
+
+                        <div class="additional-listens" id="week-14-additional"></div>
+                        <button class="add-listen-btn" data-week="week-14">+ Add Additional Listen</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Listen Actively -->
+        <section class="intro-section">
+            <h2>How to Listen Actively</h2>
+            <div class="listening-guide">
+                <p>Before diving in, establish these habits:</p>
+                <ul>
+                    <li><strong>First Listen:</strong> Let the piece wash over you without analysis. Notice your emotional response and what catches your ear.</li>
+                    <li><strong>Second Listen:</strong> Focus on one element - melody, harmony, rhythm, or orchestration. Follow a single instrument or voice through the piece.</li>
+                    <li><strong>Third Listen:</strong> Consider structure. Where does the piece begin and end emotionally? What's the journey between those points?</li>
+                    <li><strong>Fourth listen:</strong> Revisit the piece a week later without notes. What stayed with you? What changed?</li>
+                    <li><strong>Journaling:</strong> After each piece, write 3-5 sentences noting what you heard, felt, or wondered about.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Supplementary Activities -->
+        <section class="supplementary">
+            <h2>Supplementary Activities</h2>
+            <ul>
+                <li><strong>Concert attendance:</strong> If possible, attend one live performance per month. The physical presence of musicians and acoustic sound transforms the experience.</li>
+                <li><strong>Score following:</strong> Once you're comfortable with a piece, find the score online and follow along. You'll see structure more clearly.</li>
+                <li><strong>Comparative recordings:</strong> Listen to the same work performed by different artists. Horowitz's Chopin differs vastly from Rubinstein's - both valid, both revelatory.</li>
+                <li><strong>Read alongside:</strong> Supplement with "The Rest Is Noise" by Alex Ross or "How to Listen to and Understand Great Music" lectures by Robert Greenberg.</li>
+            </ul>
+            <p class="closing-note">This syllabus takes about 14 weeks at a steady pace. Take your time, repeat pieces if needed, and most importantly - follow your curiosity. If Beethoven captivates you, stay there longer. If Debussy opens a door, walk through it. This structure is your foundation, not your boundary.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Your progress and notes are saved locally in your browser.</p>
+        </div>
+    </footer>
+
+    <script src="classical-music.js"></script>
+</body>
+</html>
