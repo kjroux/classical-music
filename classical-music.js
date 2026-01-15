@@ -347,9 +347,11 @@ class ClassicalMusicTracker {
         // Expand/collapse week cards
         document.querySelectorAll('.week-header').forEach(header => {
             header.addEventListener('click', (e) => {
-                // Don't toggle if clicking checkbox or label
+                // Don't toggle if clicking checkbox, label, or Spotify link
                 if (e.target.classList.contains('week-checkbox') ||
-                    e.target.tagName === 'LABEL') {
+                    e.target.classList.contains('spotify-link') ||
+                    e.target.tagName === 'LABEL' ||
+                    e.target.closest('.spotify-link')) {
                     return;
                 }
 
