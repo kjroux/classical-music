@@ -17,6 +17,51 @@ class ClassicalMusicTracker {
         this.loadDates();
         this.attachEventListeners();
         this.updateOverallProgress();
+        this.setupModal();
+    }
+
+    // Setup custom confirmation modal
+    setupModal() {
+        const modal = document.getElementById('confirm-modal');
+        const cancelBtn = document.getElementById('confirm-cancel');
+        const deleteBtn = document.getElementById('confirm-delete');
+
+        // Close modal on cancel
+        cancelBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            this.modalResolve(false);
+        });
+
+        // Confirm deletion
+        deleteBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            this.modalResolve(true);
+        });
+
+        // Close on overlay click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+                this.modalResolve(false);
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('show')) {
+                modal.classList.remove('show');
+                this.modalResolve(false);
+            }
+        });
+    }
+
+    // Show custom confirm modal
+    showConfirmModal() {
+        return new Promise((resolve) => {
+            this.modalResolve = resolve;
+            const modal = document.getElementById('confirm-modal');
+            modal.classList.add('show');
+        });
     }
 
     // Load listening session progress from localStorage
@@ -322,8 +367,9 @@ class ClassicalMusicTracker {
             this.saveNotes(textarea);
         });
 
-        deleteBtn.addEventListener('click', () => {
-            if (confirm('Delete this listening session?')) {
+        deleteBtn.addEventListener('click', async () => {
+            const confirmed = await this.showConfirmModal();
+            if (confirmed) {
                 // Remove from DOM
                 sessionDiv.remove();
 

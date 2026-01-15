@@ -538,6 +538,107 @@ footer p {
     }
 }
 
+/* Confirmation Modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.modal-content p {
+    color: var(--text-color);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.modal-btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.modal-btn-cancel {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+.modal-btn-cancel:hover {
+    background-color: var(--border-color);
+}
+
+.modal-btn-delete {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.modal-btn-delete:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.modal-btn:active {
+    transform: scale(0.98);
+}
+
 /* Print Styles */
 @media print {
     body {
@@ -557,5 +658,9 @@ footer p {
 
     .week-content {
         max-height: none !important;
+    }
+
+    .modal-overlay {
+        display: none !important;
     }
 }
