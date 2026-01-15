@@ -162,7 +162,7 @@ class ClassicalMusicTracker {
         if (isoDate) {
             const date = new Date(isoDate);
             const dateStr = date.toLocaleDateString('en-US', {
-                month: 'short',
+                month: 'long',
                 day: 'numeric',
                 year: 'numeric'
             });
@@ -296,6 +296,7 @@ class ClassicalMusicTracker {
             <div class="session-header">
                 <input type="checkbox" class="session-checkbox" id="${sessionId}" ${isChecked ? 'checked' : ''}>
                 <label for="${sessionId}"><strong>${ordinalWord} Listen</strong> - Additional reflection</label>
+                <button class="delete-listen-btn" title="Delete this listen" aria-label="Delete listen">×</button>
             </div>
             <textarea class="session-notes" id="${textareaId}" placeholder="What new details or perspectives emerged?">${notesValue}</textarea>
         `;
@@ -305,6 +306,7 @@ class ClassicalMusicTracker {
         // Add event listeners to the new elements
         const checkbox = sessionDiv.querySelector('.session-checkbox');
         const textarea = sessionDiv.querySelector('.session-notes');
+        const deleteBtn = sessionDiv.querySelector('.delete-listen-btn');
 
         checkbox.addEventListener('change', () => {
             this.updateSessionStyle(sessionId, checkbox.checked);
@@ -318,6 +320,25 @@ class ClassicalMusicTracker {
 
         textarea.addEventListener('blur', () => {
             this.saveNotes(textarea);
+        });
+
+        deleteBtn.addEventListener('click', () => {
+            if (confirm('Delete this listening session?')) {
+                // Remove from DOM
+                sessionDiv.remove();
+
+                // Clean up localStorage
+                this.removeDate(sessionId);
+                const savedNotes = localStorage.getItem(this.storageKeyNotes);
+                if (savedNotes) {
+                    const notes = JSON.parse(savedNotes);
+                    delete notes[textareaId];
+                    localStorage.setItem(this.storageKeyNotes, JSON.stringify(notes));
+                }
+
+                // Save updated progress
+                this.saveProgress();
+            }
         });
 
         if (isChecked) {
