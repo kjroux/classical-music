@@ -294,6 +294,18 @@ main {
     line-height: 1.7;
 }
 
+.detail-section p a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.detail-section p a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
 /* Listening Sessions */
 .listening-sessions {
     padding: 25px;
